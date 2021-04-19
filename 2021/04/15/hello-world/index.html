@@ -1,212 +1,545 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
+<!-- Head tag -->
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hello World | Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://twkk.github.io/2021/04/15/hello-world/index.html">
-<meta property="og:site_name" content="Dashboard">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-04-14T18:44:58.996Z">
-<meta property="article:modified_time" content="2021-04-14T18:44:58.996Z">
-<meta property="article:author" content="KK Sung">
-<meta property="article:tag" content="Dashboard,">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Dashboard" type="application/atom+xml">
-  
-  
+    
+    <meta charset="utf-8"/>
+    <title>Dashboard</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    
+    <meta content="input db, ex influxdb" name="description"/>
+    
+    
+    <meta content="KK Sung" name="author"/>
+       
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Dashboard"/>
+    <meta property="og:title" content="Dashboard"/>
+    <meta property="og:description" content="input db, ex influxdb"/>
+    
+    
+    <meta property="og:url" content="https://twkk.github.io/2021/04/15/hello-world/"/>
+    
+        
+    
+    <!-- GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <!-- PAGE LEVEL PLUGIN STYLES -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- THEME STYLES -->
+    <link href="css/layout.css" rel="stylesheet" type="text/css"/>
+    <!-- Favicon -->
+    
     <link rel="shortcut icon" href="/favicon.png">
-  
-  
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
 <meta name="generator" content="Hexo 5.4.0"></head>
+<body id="body" data-spy="scroll" data-target=".header">
+    <!-- Header -->
+    <header class="header navbar-fixed-top">
+    <!-- Navbar -->
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="menu-container js_nav-item">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="toggle-icon"></span>
+                </button>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Dashboard</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">戰情室</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://twkk.github.io"></form>
-      </div>
-    </div>
-  </div>
+                <!-- Logo -->
+                <div class="logo">
+                    <a class="logo-wrap" href="#body">
+                        
+                            <img class="logo-img logo-img-main" src="img/logo.png">
+                        
+                        
+                            <img class="logo-img logo-img-active" src="img/logo-dark.png">
+                        
+                    </a>
+                </div>
+                <!-- End Logo -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse nav-collapse">
+                <div class="menu-container">
+                    <ul class="nav navbar-nav navbar-nav-right">
+                        
+                            <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#body">Home</a></li>
+                        
+                            <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#about">About</a></li>
+                        
+                            <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#experience">Experience</a></li>
+                        
+                            <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#work">Work</a></li>
+                        
+                            <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Contact</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <!-- End Navbar Collapse -->
+        </div>
+    </nav>
+    <!-- Navbar -->
 </header>
-
-      <div class="outer">
-        <section id="main"><article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/15/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2021-04-14T18:44:58.996Z" itemprop="datePublished">2021-04-15</time>
-</a>
+    <!-- Page Layout -->
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      Hello World
-    </h1>
-  
+<!-- Experience -->
+<div class="promo-block parallax-window" data-parallax="scroll" data-image-src="img/1920x1080/01.jpg" style="overflow-y: scroll">
+<div class="container">
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
+<div id="about">
+	<div class="row">
+        <div class="container content-lg" data-auto-height="true">
+            <div class="row">
+                <div class="col-sm-3 sm-margin-b-30">
+                    <div class="text-right sm-text-left">
+                        <h1 class="margin-b-0">Sung KK</h1>
+                        <p>About me</p>
+                    </div>
+                </div>
+			<div class="col-sm-8 col-sm-offset-1">
+                <div class="margin-b-60 bg-color-sky-light">
+                    <p>Bachelor of Science, Applied Mathematics, NCHU, Taiwan, ROC, 1998/09～2003/01 <br>Over 10 years embedded Linux firmware development focused on media system field. <br>.</p>
+                
+                <div class="row row-space-2 margin-b-4">
+                    
+                        <div class="col-md-4 md-margin-b-4">
+                            <div class="service  bg-color-base wow zoomIn " data-height="height"  data-wow-duration=".3" data-wow-delay=".1s"  >
+                                <div class="service-element">
+                                    <i class="service-icon color-white icon-screen-tablet"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3  class="color-white"  > RD Engineer -13 y</h3>
+                                        <p class="  color-white ">Image signal processing :AF/AE/AWB algorithm,Establish video AF verification system for Polycom. (Matlab)</p>
+                                </div>
+                                    <a href="#" class="content-wrapper-link"></a>
+                                </div>
+                            </div>
+                        
+                        <div class="col-md-4 md-margin-b-4">
+                            <div class="service " data-height="height"  >
+                                <div class="service-element">
+                                    <i class="service-icon icon-badge"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3  > AP FAE -2 years (Samsung/Coasia)</h3>
+                                        <p class=" ">I helped them earn Pegaton, Sony, Acer, ASUS order successfully and MP product.</p>
+                                </div>
+                                    <a href="#" class="content-wrapper-link"></a>
+                                </div>
+                            </div>
+                        
+                        <div class="col-md-4 md-margin-b-4">
+                            <div class="service " data-height="height"  >
+                                <div class="service-element">
+                                    <i class="service-icon icon-chemistry"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3  > PM -3 years</h3>
+                                        <p class=" ">put manufacturer and third party this value-chain. To boost new product line win-win</p>
+                                </div>
+                                    <a href="#" class="content-wrapper-link"></a>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <!--// end row -->
+                </div>
+            </div>
+            <!--// end row -->
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="https://twkk.github.io/2021/04/15/hello-world/" data-id="cknhuzz1b0000cki2dz3v3gkz" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
+	</div>
+	</div>
+    <!--// end row -->
+</div>
+</div>
+<!-- Work -->
+<div id="experience">
+    <div class="container content-lg">
+        <div class="row">
+            <div class="col-sm-3 sm-margin-b-30">
+                <div class="text-right sm-text-left">
+                    <h2 class="margin-b-0">Experience</h2>
+                    <p>I build the real value.</p>
+                </div>
+            </div>
+            <div class="col-sm-8 col-sm-offset-1">
+              <div class="masonry-grid row row-space-2">
+
+    <div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
+  
+    
+      <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-8 margin-b-4">
+        <!-- Work -->
+        <div class="work work-popup-trigger">
+            <div class="work-overlay">
+                <img class="full-width img-responsive" src="img/800x400/01.jpg" alt="Portfolio Image">
+                <div class="work-overlay-label">
+                  <p> new product line PM</p>
+                </div>
+            </div>
+            <div class="work-popup-overlay">
+                <div class="work-popup-content">
+                    <a href="javascript:void(0);" class="work-popup-close">Hide</a>
+                    <div class="margin-b-30">
+                        <h3 class="margin-b-5">new product line PM</h3>
+                        <span>Clean &amp; Minimalistic Design</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                            <div class="margin-t-10 sm-margin-t-0">
+                              <p>As a new product line PM, I persuaded my boss and manufacturer that if a third party company gets a suitable reward it can boost the project. I successfully boost this win-win solution for our company and partners.I help the agents play the sponsor ,and my boss play the final decision maker. Everyone puts some effort to this value-chain and plays its role .</p> <p>.</p>
+                              
+                                <p>
+                                  <b><a href="#"> Show me more </a></b>
+                                </p>
+                              
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="margin-b-5">
+                            <p><h5>Key words</h5></p>
+                          </div>
+                            <div class="margin-t-10 sm-margin-t-0">
+                              
+                                <p class="margin-b-5">Car/CAM</p>
+                              
+                                <p class="margin-b-5">Taiwan/Chain/Korea</p>
+                              
+                                <p class="margin-b-5">6 companies</p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Work -->
+    </div>
+    
+      <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 margin-b-4">
+        <!-- Work -->
+        <div class="work work-popup-trigger">
+            <div class="work-overlay">
+                <img class="full-width img-responsive" src="img/397x400/01.jpg" alt="Portfolio Image">
+                <div class="work-overlay-label">
+                  <p> Establish video AF verification system for Polycom.</p>
+                </div>
+            </div>
+            <div class="work-popup-overlay">
+                <div class="work-popup-content">
+                    <a href="javascript:void(0);" class="work-popup-close">Hide</a>
+                    <div class="margin-b-30">
+                        <h3 class="margin-b-5">Establish video AF verification system for Polycom.</h3>
+                        <span>Clean &amp; Minimalistic Design</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                            <div class="margin-t-10 sm-margin-t-0">
+                               <p> Sensor control.AF/AE/AWB algorithm </p> <p> Auto sense. Use AE and AF statistics to optimize conference room sensing</p> <p>Establish video AF verification system for Polycom</p> <p>Stepping motor control algorithm for optical zoom lens module.</p> 
+                              
+                                <p>
+                                  <b><a href="#"> Show me more </a></b>
+                                </p>
+                              
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="margin-b-5">
+                            <p><h5>Key words</h5></p>
+                          </div>
+                            <div class="margin-t-10 sm-margin-t-0">
+                              
+                                <p class="margin-b-5">Alpha Imaging Technology</p>
+                              
+                                <p class="margin-b-5">matlab/Cshell script,python</p>
+                              
+                                <p class="margin-b-5">Customer:Polycom</p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Work -->
+    </div>
+    
+      <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 md-margin-b-4">
+        <!-- Work -->
+        <div class="work work-popup-trigger">
+            <div class="work-overlay">
+                <img class="full-width img-responsive" src="img/397x300/01.jpg" alt="Portfolio Image">
+                <div class="work-overlay-label">
+                  <p> Samsung AP FAE</p>
+                </div>
+            </div>
+            <div class="work-popup-overlay">
+                <div class="work-popup-content">
+                    <a href="javascript:void(0);" class="work-popup-close">Hide</a>
+                    <div class="margin-b-30">
+                        <h3 class="margin-b-5">Samsung AP FAE</h3>
+                        <span>AP product line &amp; Android/Linux</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                            <div class="margin-t-10 sm-margin-t-0">
+                              <p>I helped to earn Pegaton, Sony, Acer, ASUS order and successfully and MP product.</p> <p>.</p> 
+                              
+                                <p>
+                                  <b><a href="#"> Show me more </a></b>
+                                </p>
+                              
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="margin-b-5">
+                            <p><h5>Key words</h5></p>
+                          </div>
+                            <div class="margin-t-10 sm-margin-t-0">
+                              
+                                <p class="margin-b-5">Android/Linux//Samsung</p>
+                              
+                                <p class="margin-b-5">Java/C</p>
+                              
+                                <p class="margin-b-5">Customer:Pegaton, Sony,Acer, ASUS</p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Work -->
+    </div>
+    
+      <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 md-margin-b-4">
+        <!-- Work -->
+        <div class="work work-popup-trigger">
+            <div class="work-overlay">
+                <img class="full-width img-responsive" src="img/397x300/02.jpg" alt="Portfolio Image">
+                <div class="work-overlay-label">
+                  <p> Canada Bus DVR</p>
+                </div>
+            </div>
+            <div class="work-popup-overlay">
+                <div class="work-popup-content">
+                    <a href="javascript:void(0);" class="work-popup-close">Hide</a>
+                    <div class="margin-b-30">
+                        <h3 class="margin-b-5">Canada Bus DVR</h3>
+                        <span>Clean &amp; Minimalistic Design</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                            <div class="margin-t-10 sm-margin-t-0">
+                              <p>D.</p> <p>nostrud.</p> 
+                              
+                                <p>
+                                  <b><a href="#"> Show me more </a></b>
+                                </p>
+                              
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="margin-b-5">
+                            <p><h5>Key words</h5></p>
+                          </div>
+                            <div class="margin-t-10 sm-margin-t-0">
+                              
+                                <p class="margin-b-5">embedded linux / Hisilicon</p>
+                              
+                                <p class="margin-b-5">C / open source</p>
+                              
+                                <p class="margin-b-5">Customer:Canada Bus DVR</p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Work -->
+    </div>
+    
+      <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
+        <!-- Work -->
+        <div class="work work-popup-trigger">
+            <div class="work-overlay">
+                <img class="full-width img-responsive" src="img/397x300/03.jpg" alt="Portfolio Image">
+                <div class="work-overlay-label">
+                  <p> RTOS driver porting. Sciopta for Car</p>
+                </div>
+            </div>
+            <div class="work-popup-overlay">
+                <div class="work-popup-content">
+                    <a href="javascript:void(0);" class="work-popup-close">Hide</a>
+                    <div class="margin-b-30">
+                        <h3 class="margin-b-5">RTOS driver porting. Sciopta for Car</h3>
+                        <span>RTOS &amp; Minimalistic Design</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                            <div class="margin-t-10 sm-margin-t-0">
+                              <p>driver porting on Sciopta OS</p> <p>.</p> 
+                              
+                                <p>
+                                  <b><a href="#"> Show me more </a></b>
+                                </p>
+                              
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="margin-b-5">
+                            <p><h5>Key words</h5></p>
+                          </div>
+                            <div class="margin-t-10 sm-margin-t-0">
+                              
+                                <p class="margin-b-5">message base RTOS-Sciopta</p>
+                              
+                                <p class="margin-b-5">DSP/ image processor VPU (CodaDx6)</p>
+                              
+                                <p class="margin-b-5">C</p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Work -->
+    </div>
+    
   </div>
-  
-    
-  
-</article>
+			  	<!-- Progress Box -->
+				
+                <div class="progress-box">
+                    <h5> RD <span class="color-heading pull-right">13 years</span></h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-color-base" role="progressbar" data-width="217"></div>
+                    </div>
+                </div>
+				
+                <div class="progress-box">
+                    <h5> FAE <span class="color-heading pull-right">3 years</span></h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-color-base" role="progressbar" data-width="50"></div>
+                    </div>
+                </div>
+				
+                <div class="progress-box">
+                    <h5> PM <span class="color-heading pull-right">3 years</span></h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-color-base" role="progressbar" data-width="50"></div>
+                    </div>
+                </div>
+				
+				<!-- End Progress Box -->
+            </div>
+        </div>
+        <!--// end row -->
+    </div>
 
+</div>    
+<!-- Contact -->
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
+<div id="contact">
+    <div class="bg-color-sky-light">
+        <div class="container content-lg">
+            <div class="row">
+                <div class="col-sm-3 sm-margin-b-30">
+                    <div class="text-right sm-text-left">
+                        <h2 class="margin-b-0">Contacts</h2>
+                        <p>Hire me.</p>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-sm-offset-1">
+                    <div class="row">
+                      
+                          <div class="col-md-3 col-xs-6 md-margin-b-30">
+                              <h5>Location</h5>
+                              <a href="#">Taiwan, Teipei</a>
+                          </div>
+                      
+                          <div class="col-md-3 col-xs-6 md-margin-b-30">
+                              <h5>Phone</h5>
+                              <a href="#">+886 982 080 104</a>
+                          </div>
+                      
+                          <div class="col-md-3 col-xs-6 md-margin-b-30">
+                              <h5>Email</h5>
+                              <a href="#">xiaochun8868@gmail.com</a>
+                          </div>
+                      
+                          <div class="col-md-3 col-xs-6 md-margin-b-30">
+                              <h5>Web</h5>
+                              <a href="#">kk.mpov.info</a>
+                          </div>
+                      
+                    </div>
+                </ul>
+					<ul class="list-inline">
+                    
+                        <li><a target="_blank" rel="noopener" href="https://github.com/twkk" class="social-icons"><i class="icon-social-github"></i></a></li>
+                    
+                        <li><a href="https://twkk.github.io/portfolio/" class="social-icons"><i class="icon-social-linkedin"></i></a></li>
+                    
+                </div>
+            </div>
+            <!--// end row -->
 
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li></ul>
+        </div>
     </div>
   </div>
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2021/04/15/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="content container">
+        <div class="row">
+            
+            <div class="col-xs-6">
+                    <img class="footer-logo" src="img/logo-dark.png">              
+            </div>
+            <div class="col-xs-6 text-right sm-text-left">
+            
+                <p class="margin-b-0">&copy; 2021 <a class="fweight-700" href="https://twkk.github.io/"></a> 
+				Powered by: <a class="fweight-700" href="http://hexo.io/" target="_blank">Hexo</a> 
+				Theme Powered by: <a class="fweight-700" target="_blank" rel="noopener" href="https://www.keenthemes.com/"> KeenThemes.com</a></p>
+            </div>
+        </div>
+        <!--// end row -->
     </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2021 KK Sung<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
 </footer>
+    <!-- After footer scripts -->
+    <!-- Back To Top -->
+<a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
 
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
+<!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- CORE PLUGINS -->
+<script src="vendor/jquery.min.js" type="text/javascript"></script>
+<script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 
+<!-- PAGE LEVEL PLUGINS -->
+<script src="vendor/jquery.easing.js" type="text/javascript"></script>
+<script src="vendor/jquery.back-to-top.js" type="text/javascript"></script>
+<script src="vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+<script src="vendor/jquery.wow.min.js" type="text/javascript"></script>
+<script src="vendor/jquery.parallax.min.js" type="text/javascript"></script>
+<script src="vendor/jquery.appear.js" type="text/javascript"></script>
+<script src="vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+<script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
 
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
+<!-- PAGE LEVEL SCRIPTS -->
+<script src="js/layout.js" type="text/javascript"></script>
+<script src="js/components/progress-bar.min.js" type="text/javascript"></script>
+<script src="js/components/masonry.min.js" type="text/javascript"></script>
+<script src="js/components/wow.min.js" type="text/javascript"></script>
 </body>
 </html>
