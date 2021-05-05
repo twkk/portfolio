@@ -531,16 +531,16 @@
 				<h2>2015 Th3::  人臉偵測改善</h2>
 				<p><b>運用場景 specific chip with hardware ada boost accelerator in real scene<br>
 			    解法:: <br>
-				  1.學長建議方式-時間序列統計法 >> 自然場景下找到機率低,有臉時間間隔太久2~4s 一張 >> 效果不彰放棄此法<br>
-				  2.ML 解法 重train ,data set 重取 >> hw training time 1weed or 1 month to check 時間因素放棄<br>
-				  3.沿用原ada boost 科學方式找答案 
-				  A..實驗分類錯誤類型–排除非臉區域誤判成臉<br>
-				  C..提出解法-- Face issue feature 數量不夠 <br>
-					>> a .人工加權 分類希望的特徵影像<br>
-					>> b. cascade train 閥值 make sure 分界數值避免是臉卻被刪除<br>
-					>> c. 增加CCE 前級 feature 個數 ,減少誤判率 (運算時間增長)<br>
+				  way 1.學長建議-時間序列統計法 >> 驗證結果:自然場景下找到機率低,有臉時間間隔太久2~4s 一張 >> 效果不彰放棄此法<br>
+				  way 2.ML 解法 重train ,data set 重取 >>考量: hw training time 1weed or 1 month to check 時間因素放棄<br>
+				  way 3.沿用原ada boost 科學方式找答案 
+				  -A..實驗分類錯誤類型–排除非臉區域誤判成臉<br>
+				  -B..觀察現有 Face issue feature 數量不夠 <br>
+					提出解法 >> a .人工加權 分類希望的特徵影像<br>
+					提出解法 >> b. cascade train 閥值 make sure 分界數值避免是臉卻被刪除<br>
+					提出解法 >> c. 增加CCE 前級 feature 個數 ,減少誤判率 (運算時間增長)<br>
 					驗證 問題<br> 
-				  ...4.成效評估<br>....
+				  -...4.成效評估<br>....
 				
 				</p></b>
 				</div>
